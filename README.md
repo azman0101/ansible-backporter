@@ -1,6 +1,6 @@
 ## backporter
 
-[![Travis CI](https://secure.travis-ci.org/debops/ansible-backporter.png)](http://travis-ci.org/debops/ansible-backporter) [![test-suite](http://img.shields.io/badge/test--suite-ansible--backporter-blue.svg)](https://github.com/debops/test-suite/tree/master/ansible-backporter/) [![Ansible Galaxy](http://img.shields.io/badge/galaxy-debops.backporter-660198.svg)](https://galaxy.ansible.com/list#/roles/1554)[![Platforms](http://img.shields.io/badge/platforms-debian%20|%20ubuntu-lightgrey.svg)](#)
+[![Travis CI](https://secure.travis-ci.org/debops/ansible-backporter.png)](http://travis-ci.org/debops/ansible-backporter) [![test-suite](http://img.shields.io/badge/test--suite-ansible--backporter-blue.svg)](https://github.com/debops/test-suite/tree/master/ansible-backporter/) [![Ansible Galaxy](http://img.shields.io/badge/galaxy-debops.backporter-660198.svg)](https://galaxy.ansible.com/list#/roles/1554) [![Platforms](http://img.shields.io/badge/platforms-debian%20|%20ubuntu-lightgrey.svg)](#)
 
 This is a helper [Ansible](https://github.com/ansible/ansible.git) role which
 allows you to ensure that Debian packages with certain versions are available
