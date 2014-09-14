@@ -74,6 +74,7 @@ backporter_new_version: '~bpo{{ ansible_distribution_version | replace(".","") }
 
 # Full string to append to backported package version (will be used in
 # changelog and finished .deb package names)
+# Set this variable to False to not add any strings to package version
 backporter_changelog_version: '{{ backporter_new_version }}+'
 
 # Message included in changelog
