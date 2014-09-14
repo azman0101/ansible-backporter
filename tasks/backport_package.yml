@@ -77,7 +77,8 @@
   shell: debchange --local {{ backporter_changelog_version }} --distribution {{ backporter_release }}-backports
          --preserve "{{ backporter_changelog_message }}"
          chdir={{ backporter_build_root }}/{{ backporter_register_build_source_dir }}
-  when: backporter_register_source_download is defined and backporter_register_source_download.changed
+  when: ((backporter_register_source_download is defined and backporter_register_source_download.changed) and
+         (backporter_changelog_version is defined and backporter_changelog_version))
 
 - name: Copy original tarball to add new version to the filename
   command: cp {{ backporter_register_orig_package.stdout }}
