@@ -159,7 +159,7 @@ ansigenome_info:
     ::
     
         ---
-        apt: 'host.example.com`
+        apt: 'host.example.com'
     
     This variable will tell ``debops.apt`` role to configure ``apt-cacher-ng``
     APT cache and ``reprepro`` repository on specified host, automatically
