@@ -80,7 +80,7 @@ ansigenome_info:
     needed, backport of a package can be enforced by a variable.
     
     To use ``debops.backporter`` with your own role, create ``meta/main.yml``
-  file and add information about role dependencies:
+    file and add information about role dependencies:
     
     ::
     
