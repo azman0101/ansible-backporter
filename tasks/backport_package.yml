@@ -102,6 +102,11 @@
   register: backporter_register_packages_to_upload
   when: (backporter_register_source_download is defined and backporter_register_source_download.changed)
 
+- name: Install prerequisites
+  apt: name={{ item }} state=latest install_recommends=no
+  with_items: backporter_prerequisites
+  when: backporter_prerequisites is defined and backporter_prerequisites
+
 - name: Install built packages
   shell: dpkg -i {{ backporter_register_packages_to_install.stdout_lines | join(' ') }} chdir={{ backporter_build_root }}
   register: backporter_register_built_packages_installed
