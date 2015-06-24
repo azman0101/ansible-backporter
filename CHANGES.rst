@@ -11,3 +11,5 @@ v0.1.0
 - Install package prerequisites during the normal backporting task list, not
   just when packages are installed from package cache. [drybjed]
 
+- Various adjustments for backporting Debian Stretch packages to Jessie.
+  [ganto]
