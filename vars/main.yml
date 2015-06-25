@@ -4,6 +4,7 @@
 # release (this information is not available in Ansible Facts)
 backporter_next:
   'wheezy': 'jessie'
+  'jessie': 'stretch'
 
 backporter_mail_subject: 'Backport of {{ backporter_package }} package uploaded to Ansible Controller'
 

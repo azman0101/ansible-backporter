@@ -85,7 +85,7 @@ backporter_changelog_message: 'Package rebuilt automatically by Ansible for loca
 
 # Linux distribution and release which will trigger backport requirement tests
 backporter_distribution: 'Debian'
-backporter_release: 'wheezy'
+backporter_release: '{% if ansible_distribution == "Debian" %}{{ ansible_distribution_release }}{% else %}jessie{% endif %}'
 
 # Should package be backported regardless of wether it's currently available in
 # APT repository?
