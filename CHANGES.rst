@@ -1,6 +1,13 @@
 Changelog
 =========
 
+v0.1.1
+------
+
+*Unreleased*
+
+- Add list of packages to remove after build. [azman0101]
+
 v0.1.0
 ------
 

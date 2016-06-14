@@ -166,11 +166,7 @@
   with_flattened:
     - '{{ backporter_sdk_packages_remove_after }}'
 
-- name: Check if packages need to be autoremoved
-  command: apt-get --dry-run autoremove
-  register: check_autoremove
-  changed_when: False
-
 - name: Autoremove unused packages
   command: apt-get -y autoremove
-  when: "'packages will be REMOVED' in check_autoremove.stdout"
+  register: autoremove_output
+  changed_when: "'The following packages will be REMOVED' in autoremove_output.stdout"
