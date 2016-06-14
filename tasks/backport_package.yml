@@ -161,3 +161,16 @@
   when: (backporter_register_built_packages_uploaded is defined and backporter_register_built_packages_uploaded.changed) and
         (backporter_mail_to is defined and backporter_mail_to)
 
+- name: Remove packages no more required
+  apt: pkg={{ item }} state=absent purge=yes
+  with_flattened:
+    - '{{ backporter_sdk_packages_remove_after }}'
+
+- name: Check if packages need to be autoremoved
+  command: apt-get --dry-run autoremove
+  register: check_autoremove
+  changed_when: False
+
+- name: Autoremove unused packages
+  command: apt-get -y autoremove
+  when: "'packages will be REMOVED' in check_autoremove.stdout"

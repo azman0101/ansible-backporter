@@ -138,6 +138,9 @@ backporter_sdk_packages: [ 'devscripts', 'build-essential', 'debian-keyring',
                            'liburi-perl', 'libdistro-info-perl', 'python-httplib2',
                            'curl', 'debhelper' ]
 
+# List of required Debian SDK packages to install on a host before backporting
+backporter_sdk_packages_remove_after: [ 'devscripts', 'build-essential' ]
+
 # List of source repositories to enable on a host
 backporter_repositories:
   - 'deb-src {{ backporter_build_mirror }} {{ ansible_distribution_release }} main contrib'
